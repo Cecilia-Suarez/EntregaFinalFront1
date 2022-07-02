@@ -1,0 +1,440 @@
+/*Globales*/
+:root {
+    --rojoBrillante: rgb(242, 95, 58);
+    --azulOscuro: rgb(35, 44, 81);
+    --azulGrisaceoOscuro: rgb(143, 148, 167);
+    --azulMuyOscuro: rgb(29, 30, 37);
+    --rojoMuyPalido: rgb(255, 239, 234);  
+}
+
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 500;
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    background-image: url("../img/bg-tablet-pattern.svg"), url("../img/bg-tablet-pattern.svg");
+    background-position: 110% -10%, -50% 70%;
+    background-repeat: no-repeat;
+}
+
+main{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+header, .home, .sobreNosotros, .testimonios div, .topFooter, footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+h1, h3, h4, h5{
+    color: var(--azulOscuro);
+}
+
+p{
+    color: var(--azulGrisaceoOscuro);
+}
+
+header, nav a, .lista span{
+    color: var(--azulMuyOscuro);
+}
+
+.button {
+    background-color: var(--rojoBrillante);
+    border: none;
+    border-radius: 3.125rem;
+    box-shadow: 0 0.25rem 0.438rem rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 0.824rem;
+    padding: 0.781rem 1.9rem;
+    text-decoration: none; 
+}
+
+.button:hover{
+    color: var(--rojoBrillante);
+    background-color: white;
+    transition: 0.5s;
+}
+
+/*Header*/
+
+header {
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+header nav {
+    font-size: 0.8rem;
+    padding: 4.8rem 0 4.8rem 0;
+}
+
+header nav a{
+    margin-right: 1.75rem; 
+    text-decoration: none;
+}
+
+/*Home*/
+.home img{
+    height: 32.813rem;
+    width: 36.25rem; 
+}
+
+.bienvenida{
+   height: 24.125rem;
+   width: 28rem;  
+}
+
+.bienvenida h1{
+    color: var(--azulOscuro);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.75rem;
+}
+
+.bienvenida p{
+    padding: 0 5.563rem 2rem 0;
+}
+    
+/*Sobre Nosotros*/
+.sobreNosotros{
+    height: 34.313rem;
+    margin: 6.188rem 0 8.281rem 0;
+}
+
+.pregunta{
+    height: 13.25rem;  
+    width: 27rem;
+}
+
+h4{
+    color: var(--azulOscuro);
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.lista{
+   height: 9.875rem; 
+   width: 34.438rem;
+}
+
+ol { 
+    counter-reset: item;
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0%;
+    position: relative; 
+}
+
+.lista span{
+    font-weight: 700;
+}
+
+ol li::before { 
+    background-color: var(--rojoBrillante);
+    border: none;
+    border-radius: 3.125rem;
+    color: white;
+    content: counter(item, decimal-leading-zero) " "; 
+    counter-increment: item;
+    margin-right: 1.438rem;
+    padding: 0.625rem 1.25rem;
+}
+
+.lista p{
+    font-weight: 500;
+    height: 6.5rem;
+    width: 28.625rem;
+    left: 5.5rem;
+    margin-bottom: 2.625rem;
+    position: relative;
+}
+
+/*Testimonios*/
+.testimonios{
+   text-align: center;
+}
+
+h3{
+    font-size: 2.451rem;
+    font-weight: 700;
+}
+
+.testimonios article{
+    align-items: center;
+    background-color: rgba(250, 250, 250, 1);
+    display: flex;
+    flex-direction: column; 
+    height: 13.688rem;
+    margin: 4.625rem 0 2.813rem 0;
+    position: relative;
+    width: 24rem;  
+    transition: 0.3s;
+}
+
+.testimonios article:hover{
+    transform: scale(1.5);
+    transition: 0.3s;
+    z-index: 10;
+    box-shadow: 0 0.25rem 0.438rem rgba(0, 0, 0, 0.25);
+}
+
+.testimonios article img{
+   height: 4.375rem;
+   position: absolute;
+   top: -35px;
+}
+
+h5{
+    font-weight: 700; 
+    padding-top: 1.313rem;  
+}
+
+.testimonios article p{
+    padding: 0 1.688rem 0 1.688rem;
+}
+
+/*TopFooter*/
+.topFooter{
+    align-items: center;
+    background-color: var(--rojoBrillante);
+    flex-wrap: wrap;
+    height: 14rem;
+    margin-top: 11.25rem;
+}
+
+h2{
+    color: white;
+    font-weight: 700;
+    font-size: 2.5rem;
+    height: 6rem;
+    width: 35rem;
+}
+
+.topFooter .button{
+    background-color: white;
+    color: var(--rojoBrillante);
+}
+
+.topFooter .button:hover{
+    background-color: var(--azulMuyOscuro);
+    color: white;
+    transition: 0.5s;
+}
+
+/*Footer*/
+footer{
+    background-color:black;
+    flex-wrap: wrap;
+    padding: 3.308rem 0 3.308rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logos{
+    display: flex;
+    flex-direction: column;
+}
+
+.logoFooter{
+    height: 1.6rem;
+    margin-bottom: 4.168rem;
+    width: 9rem;
+}
+
+.logos div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.logos div a:link, .logos div a:visited{
+    padding-left: 0%;
+    color: white;
+}
+
+.navegacion{
+    display: flex;
+    height: 8.821rem;
+    justify-content: space-between;
+    width: 24.546rem;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+ul li {
+    padding-bottom: 0.75rem;
+}
+
+ul li a{
+    color: var(--azulGrisaceoOscuro);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+form input{
+    border: 3px solid black;
+    border-radius: 3.125rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.781rem 0 0.781rem 0.625rem;   
+}
+
+form input:valid{
+    border: 3px solid green;
+}
+
+form button {
+    background-color: var(--rojoBrillante);
+    border: none;
+    border-radius: 3.125rem;
+    color: white;
+    font-size: 0.8rem;
+    margin-left: 0.563rem;
+    padding: 0.719rem  1.406rem;
+    cursor: pointer;
+}
+
+footer p{
+    color: var(--azulGrisaceoOscuro);
+    font-size: 0.781rem;
+    font-weight: 500;
+    position: absolute;
+    align-self: flex-end;
+    right: 9rem;
+}
+
+@media (max-width: 375px){
+    header{
+        margin: 5rem 0 3rem 0;
+    }
+    
+    header nav, header .button{
+        display: none;
+    }
+
+    .home, .sobreNosotros, .testimonios div, .topFooter{
+        flex-direction: column; 
+    }
+
+    .home .bienvenida, .bienvenida p{
+        order: 1;
+        padding-bottom: 5rem;
+        text-align: center;
+        width: 100vw;
+    }
+
+    .bienvenida h1{
+        margin-top: 0%;
+    }
+
+    .home img{
+        height: 25rem;
+        order: 0;
+        width: 100vw;
+    }
+
+    .sobreNosotros .pregunta{
+        text-align: center;
+        width: 100vw;
+    }
+
+    .lista span{
+        background-color: var(--rojoMuyPalido);
+        margin-left: -0.5rem;
+        padding: 0.5rem 1rem 0.5rem 2rem;
+    }
+
+    ol li:before{
+        left: 3%;
+        margin-right: 0%;
+        position: relative;
+    }
+
+    .lista p{
+        left: 3%;
+        width: 90vw;  
+    }
+
+    .lista, .testimonios div article{
+        width: 100vw;
+    }
+
+    .testimonios{
+        margin-top: 15rem;
+    }
+
+    .topFooter h2{
+        text-align: center;
+        width: 100vw;
+    }
+
+    .topFooter{
+        height: 30rem;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .navegacion{
+        margin: 3rem 0 3rem 0;
+        order: 1;
+        width: 18rem;
+    }
+
+    footer form{
+        order: 0;
+    }
+
+    footer .logos {
+        order: 2;
+    }
+
+    .logos .logoFooter{
+        order: 3;
+        margin-top: 3rem;
+    }
+
+    footer p{
+        order: 4;
+        position: relative;
+        right: 5rem;
+    }
+
+    .bienvenida, .bienvenida p{
+        padding: 0%;
+    }
+
+    .testimonios article:hover{
+        transform: none;
+    }
+}
+
+@media (min-width: 1279px){
+    header .hamburguer{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
